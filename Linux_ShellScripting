@@ -1,0 +1,127 @@
+nux Basics & Shell Scripting - Complete Guide (With Advanced Concepts & Hands-On Exercises)**
+
+## **í´¥ Section 1: Linux Fundamentals (Basic to Advanced)**
+
+### **1.1 Introduction to Linux**
+- What is Linux? History & Evolution
+- Linux Distributions: Ubuntu, CentOS, RHEL, Debian
+- Open Source Philosophy & Linux Architecture
+- Installing Linux (VM, Dual Boot, Cloud-based Linux)
+- Hands-on: Install Ubuntu Server on VirtualBox/AWS EC2
+
+### **1.2 Linux File System & Directories**
+- Linux Directory Structure (`/bin`, `/etc`, `/home`, `/var`)
+- File Types: Regular, Directory, Symbolic Links
+- File Operations: `ls`, `cd`, `pwd`, `cp`, `mv`, `rm`, `find`, `locate`
+- Hands-on: Create a structured directory and manage files
+
+### **1.3 User & Group Management**
+- User Management: `useradd`, `usermod`, `passwd`, `id`
+- Group Management: `groupadd`, `gpasswd`, `groups`
+- Understanding `sudo` & `sudoers` File
+- Hands-on: Create users and set permissions for collaboration
+
+### **1.4 File Permissions & Ownership**
+- File & Directory Permissions (`chmod`, `chown`, `umask`)
+- Advanced ACL Permissions (`getfacl`, `setfacl`)
+- Hands-on: Configure ACL for specific user access control
+
+### **1.5 Process Management**
+- Checking Running Processes: `ps`, `top`, `htop`, `pidof`
+- Managing Processes: `kill`, `pkill`, `nice`, `renice`
+- Running Background & Foreground Jobs: `bg`, `fg`, `jobs`, `nohup`
+- Hands-on: Manage system resource usage with `nice` & `renice`
+
+### **1.6 Disk & Storage Management**
+- Checking Disk Usage: `df`, `du`, `lsblk`
+- Partitioning: `fdisk`, `parted`, `mkfs`
+- Logical Volume Management (LVM): `pvcreate`, `vgcreate`, `lvcreate`
+- RAID Configuration: `mdadm` for RAID setups
+- Hands-on: Configure LVM for dynamic storage allocation
+
+### **1.7 Package Management**
+- Installing, Updating & Removing Packages
+  - Debian-based (Ubuntu): `apt`, `dpkg`
+  - RHEL-based (CentOS): `yum`, `dnf`, `rpm`
+- Managing Repositories & PPAs
+- Hands-on: Install and manage software using `apt` & `yum`
+
+### **1.8 Networking in Linux**
+- Checking Network Configuration: `ip a`, `ifconfig`, `netstat`, `ss`
+- Testing Network Connectivity: `ping`, `traceroute`, `curl`, `wget`
+- SSH & Remote Access: `ssh`, `scp`, `rsync`
+- Configuring Network Interfaces & Static IPs
+- Hands-on: Set up SSH key-based authentication
+
+### **1.9 System Security & Hardening**
+- SELinux & AppArmor: Enabling & Managing
+- Firewall Management: `iptables`, `firewalld`, `ufw`
+- Secure Logins: Disabling root SSH, Fail2Ban
+- Hands-on: Configure a firewall and monitor failed login attempts
+
+### **1.10 Performance Monitoring & Troubleshooting**
+- Monitoring System Performance: `vmstat`, `iostat`, `sar`
+- Real-Time Monitoring: `htop`, `iotop`, `dstat`
+- Kernel Tuning with `sysctl`
+- Hands-on: Optimize kernel parameters for high-performance workloads
+
+---
+
+## **í´¥ Section 2: Shell Scripting (Basic to Advanced)**
+
+### **2.1 Introduction to Shell Scripting**
+- What is Shell Scripting?
+- Writing & Executing Shell Scripts (`.sh` files, `#!/bin/bash`)
+- Hands-on: Create and run your first shell script
+
+### **2.2 Variables, Data Types & User Input**
+- Defining & Using Variables (`VAR=value`, `$VAR`)
+- Special Variables (`$0`, `$1`, `$@`, `$#`, `$?`)
+- Reading User Input (`read` command)
+- Hands-on: Write a script that accepts user input and prints details
+
+### **2.3 Operators & Conditional Statements**
+- Arithmetic Operators (`+`, `-`, `*`, `/`, `%`, `expr`)
+- Conditional Statements: `if`, `elif`, `else`, `case`
+- Hands-on: Create a calculator script with user input
+
+### **2.4 Looping Statements**
+- `for`, `while`, `until` Loops
+- Loop Control: `break`, `continue`
+- Hands-on: Automate file renaming using loops
+
+### **2.5 Functions & Advanced Scripting Techniques**
+- Writing & Calling Functions (`function_name() {}`)
+- Using Function Arguments (`$1`, `$2`, `$@`)
+- Error Handling & Debugging (`set -x`, `trap` command)
+- Hands-on: Create a modular script with reusable functions
+
+### **2.6 File Handling & Text Processing**
+- Reading & Writing to Files (`cat`, `echo`, `>`, `>>`)
+- Text Processing: `awk`, `sed`, `cut`, `tr`, `grep`
+- Hands-on: Extract specific log entries using `awk` & `sed`
+
+### **2.7 Parallel Execution & Performance Optimization**
+- Running Background Jobs (`&`, `wait` command)
+- Using `xargs` & `parallel` for batch execution
+- Hands-on: Run multiple scripts simultaneously for faster execution
+
+### **2.8 Automation & Scheduling**
+- Cron Jobs (`crontab -e`, scheduling tasks)
+- `at` Command for Delayed Execution
+- Hands-on: Automate daily log cleanup with cron jobs
+
+### **2.9 Real-World Shell Scripting Projects**
+- **Automated System Backup Script** (`tar`, `rsync`, `scp`)
+- **Log File Analyzer** (`awk`, `sed`, `grep`)
+- **User Account Management Script** (Batch user creation & deletion)
+- **Disk Space Monitoring & Alerting** (`df`, `mail` alerting)
+- **Automated Software Installation Script**
+
+---
+
+## **í³Œ Next Steps**
+- **Daily Hands-on Practice**: Implement real-world scripts
+- **Challenge Yourself**: Create custom automation solutions
+- **Optimize & Debug**: Improve efficiency & troubleshoot scripts
+
