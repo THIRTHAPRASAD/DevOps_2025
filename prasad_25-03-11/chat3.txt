@@ -1,0 +1,57 @@
+hecking if a User Exists in Linux
+bash
+Copy
+Edit
+echo "Enter username:"
+read user
+
+if id "$user" &>/dev/null; then
+    echo "User exists."
+else
+    echo "User does not exist."
+fi
+âœ… Key Learnings:
+
+id <username> checks if a user exists.
+&>/dev/null suppresses output.
+Avoid using [ brackets inside if when executing commands directly.
+í³Œ 2. When to Use [], (), and No Brackets in if Conditions
+âœ… Use [] for comparisons:
+
+bash
+Copy
+Edit
+if [ "$num" -gt 10 ]; then
+    echo "Number is greater than 10."
+fi
+âœ… Use () for command substitution:
+
+bash
+Copy
+Edit
+if (ls /tmp &>/dev/null); then
+    echo "Directory exists."
+fi
+âœ… No brackets when using command exit codes:
+
+bash
+Copy
+Edit
+if systemctl is-active --quiet apache2; then
+    echo "Apache is running."
+fi
+í³Œ 3. Checking if Apache is Running
+bash
+Copy
+Edit
+if systemctl is-active --quiet apache2; then
+    echo "Apache is running."
+else
+    echo "Apache is not running."
+fi
+âœ… Key Learnings:
+
+systemctl is-active apache2 checks if Apache is running.
+--quiet suppresses output and uses the exit code for evaluation.
+Common error: "Failed to parse signal string '-active'" â†’ Happens due to incorrect syntax.
+

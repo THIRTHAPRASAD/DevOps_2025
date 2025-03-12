@@ -1,0 +1,37 @@
+nux Basics - Hands-On Tasks
+✅ Searching for Files & Text:
+
+find . -type f -name "*.txt" → Find all .txt files in the current directory.
+find . -type f -mtime -1 → Find files modified in the last 1 day.
+grep "Error" file2.log → Search for the word "Error" in a file.
+grep -i "hello" file1.txt → Case-insensitive search for "hello".
+✅ Viewing File Contents:
+
+cat sample.txt → Display full file content.
+head -n 2 sample.txt → Show the first 2 lines of a file.
+tail -n 2 sample.txt → Show the last 2 lines of a file.
+less sample.txt → Scroll through file contents (press q to exit).
+✅ Disk & Memory Monitoring:
+
+df -h → Check disk space usage.
+free -h → View memory usage.
+du -ah $HOME | sort -rh | head -10 → List top 10 largest files.
+✅ Networking Basics:
+
+ip a → Display your IP address.
+ping -c 4 google.com → Check internet connectivity.
+netstat -tulnp (or ss -tulnp) → Show active network connections.
+sudo netstat -tulnp | grep LISTEN → Check for open ports.
+��� Shell Scripting - Hands-On Tasks
+✅ Using Loops in Shell Scripts:
+
+Created a for loop script that prints messages multiple times.
+✅ Automating Backups with Shell Script:
+
+Wrote a script to backup files from one directory to another automatically.
+✅ Scheduling Tasks with Cron Jobs:
+
+Used crontab -e to schedule a script to run every minute.
+✅ Handling Arguments in Shell Scripts:
+
+Created a script that accepts command-line arguments for dynamic input.

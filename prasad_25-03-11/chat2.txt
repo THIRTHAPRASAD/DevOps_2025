@@ -1,0 +1,87 @@
+hecking System & Network Information
+Find the installed OS:
+bash
+Copy
+Edit
+cat /etc/os-release
+Check IP address of eth0:
+bash
+Copy
+Edit
+ip -4 addr show eth0
+Find the subnet mask of eth0:
+bash
+Copy
+Edit
+ip -4 addr show eth0 | grep "inet" | awk '{print $2}'
+Find which package provides a file (/usr/bin/chsh):
+bash
+Copy
+Edit
+dpkg -S /usr/bin/chsh   # Debian-based systems (Ubuntu)
+rpm -qf /usr/bin/chsh   # RHEL-based systems (CentOS)
+2️⃣ User & Shell Management
+Change the default shell for a user (bob) to Bourne Shell (/bin/sh):
+bash
+Copy
+Edit
+chsh -s /bin/sh bob
+3️⃣ File & Directory Operations
+Find files with a prefix (large) in /var and save them to /opt/largest_files:
+bash
+Copy
+Edit
+find /var -name "large*" | head -2 > /opt/largest_files
+Create a file with multiple lines:
+bash
+Copy
+Edit
+echo -e "Line 1\nLine 2\nLine 3\nLine 4\nLine 5" > sample.txt
+View file contents interactively:
+bash
+Copy
+Edit
+less sample.txt
+Find the top 10 largest files/directories in the home directory:
+bash
+Copy
+Edit
+du -ah $HOME | sort -rh | head -10
+4️⃣ Apache Configuration & Firewall
+Change Apache service user & port:
+Ensure Apache runs as apache:apache and on port 8081
+Allow 8081 through the firewall:
+bash
+Copy
+Edit
+sudo firewall-cmd --permanent --add-port=8081/tcp
+sudo firewall-cmd --reload
+5️⃣ Bash Scripting & Conditional Statements
+Check if a file exists:
+bash
+Copy
+Edit
+if [ -f "$FILE" ]; then echo "File exists."; else echo "File does not exist."; fi
+Check if a directory exists:
+bash
+Copy
+Edit
+if [ -d "$DIR" ]; then echo "Directory exists."; else echo "Directory does not exist."; fi
+Check if a number is even or odd:
+bash
+Copy
+Edit
+if (( num % 2 == 0 )); then echo "Even"; else echo "Odd"; fi
+Check disk usage and warn if above 80%:
+bash
+Copy
+Edit
+usage=$(df / | awk 'NR==2 {print $5}' | sed 's/%//')
+if [ "$usage" -gt 80 ]; then echo "Warning: Disk usage is high ($usage%)!"; fi
+✅ Key Takeaways:
+
+Learned Linux system & network commands
+Explored user & shell management
+Practiced file handling & search operations
+Configured Apache service & firewall
+Improved Bash scripting skills with if-else conditions
