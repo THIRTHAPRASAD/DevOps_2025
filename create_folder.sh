@@ -1,5 +1,5 @@
 #!/bin/bash
-base_dir="$HOME/DevOps_2025"
+base_dir="$HOME/DevOps_2025/$(date +"%B")"
 folder_name="$base_dir/prasad_$(date +%y-%m-%d)"
 if [[ ! -e "$folder_name" ]]; then
 	mkdir -p "$folder_name"

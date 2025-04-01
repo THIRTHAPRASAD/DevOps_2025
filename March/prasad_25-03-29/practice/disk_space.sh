@@ -4,6 +4,6 @@ usage=$(df / | grep '/' | awk '{print $5}' | tr -d '%')
 if [[ "$usage" -ge "$threshold" ]]; then
 	echo " *******Alert******"
 else
-	echo "oaky"
+	echo "Disk space usage is below 80%"
 fi
 
