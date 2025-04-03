@@ -1,0 +1,10 @@
+#!/bin/bash
+processes=("nginx" "apache2" "ssh")
+for procs in "${processes[@]}"; do
+	if systemctl is-active --quiet "$procs"; then
+		echo "process $procs is running"
+	else
+		echo "process is inactive"
+	fi
+done
+

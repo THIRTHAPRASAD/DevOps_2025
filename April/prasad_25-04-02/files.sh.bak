@@ -1,0 +1,6 @@
+#!/bin/bash
+#process all the files in a directory
+for file in /home/ubuntu/DevOps_2025/April/prasad_25-04-02/*; do
+	echo "$file"
+done
+

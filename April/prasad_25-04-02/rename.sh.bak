@@ -1,0 +1,9 @@
+#!/bin/bash
+for file in /home/ubuntu/DevOps_2025/April/prasad_25-04-02/*; do
+	if [[ -f "$file" ]]; then
+		mv "$file" "$file.bak"
+		echo "renamed $file"
+	fi
+done
+
+
